@@ -1,7 +1,7 @@
 // package jjjava.hw2;
 
 import java.io.IOException;
-import java.util.logging.*;;
+import java.util.logging.*;
 
 public class hw2 {
 
@@ -28,7 +28,9 @@ public class hw2 {
         }
         return result.toString();
     }
+    
     public static Logger log = Logger.getLogger(hw2.class.getName());
+
     private static String bubbleSort(int[] arr) {
         // Logger logger = Logger.getLogger(hw2.class.getName());
         log.info("bubbleSort starting");
@@ -65,17 +67,6 @@ public class hw2 {
     }
 
     public static void main(String[] args) throws IOException{
-
-        // task1
-
-        // String jsonReq =
-        // "{\"name\":\"Ivanov\",\"country\":\"Russia\",\"city\":\"Moscow\",\"age\":null}";
-        // System.out.println(sqlbuilder(jsonReq));
-        // jsonReq =
-        // "{\"name\":\"Ivanov\",\"country\":\"null\",\"city\":\"Moscow\",\"age\":null}";
-        // System.out.println(sqlbuilder(jsonReq));
-
-        // task2
 
         FileHandler fh = new FileHandler("log.txt");
         log.addHandler(fh);
