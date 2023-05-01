@@ -62,7 +62,27 @@ public class hw3 {
 
         //TASK3
 
-        collection.sort(null);
-        System.out.printf("min element: %d\nmax element: %d\naverage element: %d", collection.get(0), collection.get(10), collection.get(6));
+        // collection.sort(null);
+        // System.out.printf("min element: %d\nmax element: %d\naverage element: %d", collection.get(0), collection.get(10), collection.get(6));
+        int max = collection.get(0);
+        int min = collection.get(0);
+        for (int i = 1; i < collection.size(); i++) {
+            if (collection.get(i) > max)
+                max = collection.get(i);
+            else if (collection.get(i) < min)
+                min = collection.get(i);
+        }
+        int realmid = (max - min)/2;
+        int mid = 0;
+        for (int i = 0; i < collection.size(); i++) {
+            for (int j = 0; j < collection.size(); j++) {
+                if (collection.get(j) - i == realmid) {
+                    mid = collection.get(j);
+                    break;
+                }
+            }
+            if (mid > 0) break;
+        }
+        System.out.printf("min element: %d\nmax element: %d\naverage element: %d", min, max, mid);
     }
 }
